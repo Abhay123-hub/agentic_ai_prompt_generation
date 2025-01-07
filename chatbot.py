@@ -17,7 +17,9 @@ from typing import Annotated
 from typing_extensions import TypedDict
 import uuid
 config = {"configurable": {"thread_id": str(uuid.uuid4())}}
-
+from dotenev import load_dotenv
+load_dotenv()
+open_ai_api_key = os.getenv("OPENAI_API_KEY")
 class State(TypedDict):
     messages: Annotated[list,add_messages]
 
@@ -34,7 +36,7 @@ after you are able to discern all the information ,call the relevant tool
   """
 
 from langchain_openai import ChatOpenAI
-llm = ChatOpenAI(model="gpt-3.5-turbo",api_key="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")
+llm = ChatOpenAI(model="gpt-3.5-turbo",api_key=open_ai_api_key)
 
 
 class PromptInstructions(BaseModel):
