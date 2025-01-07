@@ -119,7 +119,7 @@ class chatbot:
 
         graph = workflow.compile(checkpointer = memory)
         self.app = graph
-        return self.app
+        return self.app ##
 
 if __name__ == "__main__":
     mybot = chatbot()
