@@ -126,6 +126,6 @@ if __name__ == "__main__":
     workflow = mybot()
     inputs = {"messages":["give me the story of two friends working in coal mine get less pay but satisfied with family and happy"]}
     response = workflow.invoke(inputs,config = config)
-    print(response["messages"][-1].content)
+    print(response["messages"][-1].content) ##
     
 
