@@ -12,4 +12,4 @@ langchain-nomic
 langchain-text-splitters
 sentence-transformers
 streamlit
-langchain-openai
+langchain-openai##
